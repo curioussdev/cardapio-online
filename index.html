@@ -60,7 +60,7 @@
     <!--INICIO MENU-->
 
     <div id="menu">
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-4 mb-16">
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-4 mb-16">
 
             <!--PRODUTO ITEM-->
 
@@ -179,9 +179,137 @@
             <!--FIM PRODUTO ITEM-->
 
         </main>
+
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-1xl">Bebidas</h2>
+        </div>
     </div>
 
+    <!-- GRID BEBIDAS -->
+
+    <div id="menu" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-4 mb-16">
+          <!--BEBIDA ITEM-->
+
+          <div class="flex gap-2 w-full" >
+            <img 
+                src="./assets/rest/refri-1.png"
+                alt="coca cola"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-2 duration-150"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">Coca cola Lata</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">800 kz</p>
+                        <button 
+                        class="bg-gray-800 px-4 rounded addToCartBtn"
+                        data-name="Coca cola Lata"
+                        data-price="800"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>  
+                    </div>
+            </div> 
+        </div>
+
+        <!--FIM BEBIDA ITEM-->
+
+        <!--BEBIDA ITEM-->
+
+        <div class="flex gap-2 w-full" >
+            <img 
+                src="./assets/rest/refri-2.png"
+                alt="guarana-lata"
+                class="w-28 h-28 rounded-md hover:scale-105 hover:-rotate-2 duration-150"
+            >
+
+            <div class="w-full">
+                <p class="font-bold">guarana-lata</p>
+                
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">800 kz</p>
+                        <button 
+                        class="bg-gray-800 px-4 rounded addToCartBtn"
+                        data-name="guarana-lata"
+                        data-price="800"
+                        >
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>  
+                    </div>
+            </div> 
+        </div>
+
+        <!--FIM BEBIDA ITEM-->
+
+     </div>
+
+    <!-- FIM GRID BEBIDAS -->
+
     <!-- FIM MENU -->
+
+
+
+
+    <!--MODAL CART-->
+
+
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] flex items-center justify-center ">
+        <div class="bg-white p-5 rounded-md  min-w-[90%] md:min-w-[750px]">
+            <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            <div class="flex justify-between flex-col">
+                <p class="font-semibold mt-2 mb-4">Endereço de entrega!</p>
+                
+                <input 
+                class="w-full border-2 p-1 rounded my-1 "
+                type="text"
+                placeholder="Digite o seu endereço"
+                id="address"
+                >
+
+                <p class="text-red-500 hidden " id="address-warn" >Digite seu endereço completo!</p>
+
+                <p class="font-bold text-lg mb-5 mt-5">Total: <span id="cart-total">0</span></p>
+
+                <div class="flex items-center justify-between mt-2 w-full ">
+                    <button class="bg-red-600 rounded tex-bold text-white py-2 px-4" id="close-modal-btn">fechar</button>
+                    <button class="bg-green-600 px-4 py-2 rounded text-white text-bold" id="checkout-btn">Finalizar compra</button>
+                </div>
+                
+                
+                
+            </div>
+
+           
+    
+        </div>
+    </div>
+
+
+    <!--FIM MODAL CART-->
+
+
+
+
+
+    <!-- BOOTON CART FOOTER -->
+
+    <footer class="w-full bg-red-500 py-3 fixed bottom-0 z-40 flex items-center justify-center">
+        <button 
+        class=" text-white font-bold items-center gap-2"
+        id="cart-btn"
+        >
+            (<span id="cart-count">2<span>)
+                ver carrinho
+                <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+    </footer>
+
+    <!-- FIM BOOTON CART FOOTER -->
 
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
